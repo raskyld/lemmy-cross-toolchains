@@ -1,15 +1,14 @@
 # syntax=docker/dockerfile:1.6
 
-LABEL org.opencontainers.image.authors="Enzo Nocera <enzo@nocera.eu>"
-LABEL org.opencontainers.image.source="https://github.com/raskyld/lemmy-cross-toolchains/aarch64-lemmy-linux-gnu"
-LABEL org.opencontainers.image.version="0.1.0"
-LABEL org.opencontainers.image.licenses="Apache-2.0"
-LABEL org.opencontainers.image.description="A cross toolchain from amd64 to aarch64 for the lemmy project"
-
 ARG RUST_VERSION=1.73.0
 ARG BASE_IMAGE=debian:bookworm
 
 FROM --platform=amd64 ${BASE_IMAGE} AS buildroot
+
+LABEL org.opencontainers.image.authors="Enzo Nocera <enzo@nocera.eu>"
+LABEL org.opencontainers.image.source="https://github.com/raskyld/lemmy-cross-toolchains/aarch64-lemmy-linux-gnu"
+LABEL org.opencontainers.image.licenses="Apache-2.0"
+LABEL org.opencontainers.image.description="A cross toolchain from amd64 to aarch64 for the lemmy project"
 
 ARG BR2_VERSION="e091e31831122b60b084bd755e94df4dfe7188d2"
 ARG BR2_GIT_REPO="https://github.com/buildroot/buildroot.git"

@@ -6,3 +6,17 @@ with me if you need help with cross-compilation in the Rust ecosystem as I was
 close to lose my mental sanity building those toolchains.
 
 [lemmy]: https://github.com/LemmyNet/lemmy
+
+## Toolchains
+
+### aarch64-lemmy-linux-gnu
+
+Build: `amd64`
+
+Host: `aarch64`
+
+Components:
+- `libpq`
+- `openssl`
+- `glibc`
+- `gcc`

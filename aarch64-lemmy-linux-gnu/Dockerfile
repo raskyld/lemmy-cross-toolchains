@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.6
 
-ARG RUST_VERSION=1.73.0
+ARG RUST_VERSION=1.75
 ARG BASE_IMAGE=debian:bookworm
 
 FROM --platform=amd64 ${BASE_IMAGE} AS buildroot

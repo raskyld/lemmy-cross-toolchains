@@ -11,7 +11,7 @@ LABEL org.opencontainers.image.description="A cross toolchain from amd64 to aarc
 
 ARG BR2_VERSION="e091e31831122b60b084bd755e94df4dfe7188d2"
 ARG BR2_GIT_REPO="https://github.com/buildroot/buildroot.git"
-ARG RUST_VERSION=1.80
+ARG RUST_VERSION=1.81
 
 RUN apt-get update && \
    apt-get install -y build-essential binutils diffutils bzip2 perl unzip rsync cpio bc git file wget curl

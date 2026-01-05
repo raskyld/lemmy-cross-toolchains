@@ -9,16 +9,16 @@ LABEL org.opencontainers.image.source="https://github.com/raskyld/lemmy-cross-to
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 LABEL org.opencontainers.image.description="A cross toolchain from amd64 to aarch64 for the lemmy project"
 
-ARG BR2_VERSION="e091e31831122b60b084bd755e94df4dfe7188d2"
+ARG BR2_VERSION="053eb1a9840e5ab019d9aab348772491ce7afcd7"
 ARG BR2_GIT_REPO="https://github.com/buildroot/buildroot.git"
 ARG RUST_VERSION=1.91
 
 RUN apt-get update && \
-   apt-get install -y build-essential binutils diffutils bzip2 perl unzip rsync cpio bc git file wget curl
+    apt-get install -y build-essential binutils diffutils bzip2 perl unzip rsync cpio bc git file wget curl
 
 # We run as non-root user, your average SRE will thank me for that ;)
 RUN groupadd -g 10001 lemmy && \
-   useradd -m -u 10001 -g lemmy lemmy
+    useradd -m -u 10001 -g lemmy lemmy
 
 USER 10001:10001
 WORKDIR /home/lemmy
